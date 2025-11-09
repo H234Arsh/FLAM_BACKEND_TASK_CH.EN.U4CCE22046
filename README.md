@@ -11,7 +11,7 @@ All operations are performed using:
 python queuectl.py <command>
 ![alt text](image.png)
 
-💻 Usage Examples:
+Usage Examples:
 
 1. Enqueue a Job
 We can add a new job directly or from a JSON file.
@@ -34,13 +34,13 @@ Press Ctrl + C to stop workers gracefully (they finish current jobs before stopp
 Displays total jobs and count by states.
 python queuectl.py status
 Example output:
-📊 Job counts by state:
+Job counts by state:
   pending: 0
   processing: 0
   completed: 2
   failed: 0
   dead: 1
-📈 Metrics summary:
+Metrics summary:
   total_jobs: 3
   success_runs: 2
   failed_runs: 1
@@ -71,7 +71,7 @@ Total jobs by state
 Job list with status
 DLQ count and metrics summary
 
-🧠 Architecture Overview:
+Architecture Overview:
 ![alt text](QUEUECTL.png)
 The system is divided into four main layers:
 
@@ -105,7 +105,7 @@ Displays total job counts by state, DLQ count, and recent jobs.
 
 ![alt text](image-1.png)
 
-⚖️ Assumptions & Trade-offs
+Assumptions & Trade-offs
 
 SQLite is used for simplicity and persistence (no external DB needed).
 Workers are implemented as threads, not separate processes (simpler for local testing).
@@ -114,13 +114,13 @@ Exponential backoff uses a base defined in configuration (base_backoff).
 Graceful shutdown ensures workers finish current jobs before stopping.
 Minimal dashboard (Flask) is for monitoring only; no job control actions from web.
 
-🧪 Testing Instructions:
+Testing Instructions:
 We can test all scenarios manually using the CLI:
-✅ Basic Success Job
+Basic Success Job
         python queuectl.py enqueue --file job_success.json
         python queuectl.py worker start --count 1
 
-❌ Failed Job and DLQ
+Failed Job and DLQ
 Create a job with an invalid command:
 
 {
@@ -136,18 +136,18 @@ Enqueue and start the worker:
 After retries, verify:
         python queuectl.py dlq list
 
-🔁 Retry Verification
+Retry Verification
 Retry a dead job:
         python queuectl.py dlq retry <job_id>
 
 Check if it reappears under pending state:
         python queuectl.py list --state pending
 
-⚙️ Configuration Test
+Configuration Test
         python queuectl.py config set max-retries 5
         python queuectl.py config get max-retries
 
-📊 Persistence Test
+Persistence Test
 
 Stop and restart the app:
         python queuectl.py status
