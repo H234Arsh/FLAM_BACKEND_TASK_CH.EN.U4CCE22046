@@ -166,3 +166,17 @@ Job run logging and monitoring through a Flask dashboard
 It’s designed for clarity, modularity, and correctness — all required functionalities are implemented and verifiable through command-line testing.
 
 DEMONSTRATION VIDEO LINK: https://drive.google.com/file/d/1FvEh5Ab5x6DTY48fxkfyOcA8DIN2ElhS/view?usp=sharing
+
+References
+
+1. Grinberg, M. (2018). *Flask Web Development: Developing Web Applications with Python (2nd ed.)*. O’Reilly Media.  
+Retrieved from https://flask.palletsprojects.com/
+2. Python Software Foundation. (2024). *Python 3.12 Documentation*. Retrieved from https://docs.python.org/3/
+3. Representational State Transfer (REST). (2024). *REST architectural style*. Retrieved from https://restfulapi.net/
+4. JSON.org. (2024). *Introducing JSON (JavaScript Object Notation)*. Retrieved from https://www.json.org/
+5. Postman, Inc. (2024). *Postman API Platform: API testing and collaboration tool*. Retrieved from https://www.postman.com/
+
+Additional Resources
+1. Online developer forums and open technical discussion boards were referenced to understand standard backend architecture patterns and API handling techniques.
+2. General implementation guidance was taken from publicly available software engineering resources and documentation platforms.
+
