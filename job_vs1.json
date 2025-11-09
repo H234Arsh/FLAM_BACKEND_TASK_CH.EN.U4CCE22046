@@ -1,0 +1,4 @@
+{
+  "command": "echo hello from vscode",
+  "max_retries": 2
+}

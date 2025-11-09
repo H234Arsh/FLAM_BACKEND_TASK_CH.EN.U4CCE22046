@@ -1,0 +1,4 @@
+{
+  "command": "echo scheduled job",
+  "run_at": "2025-11-09T23:00:00Z"
+}

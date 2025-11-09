@@ -1,0 +1,30 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run queuectl enqueue sample",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/queuectl.py",
+      "args": [
+        "enqueue",
+        "--file",
+        "${workspaceFolder}/job_vs1.json"
+      ],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Run queuectl worker start",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/queuectl.py",
+      "args": [
+        "worker",
+        "start",
+        "--count",
+        "1"
+      ],
+      "console": "integratedTerminal"
+    }
+  ]
+}

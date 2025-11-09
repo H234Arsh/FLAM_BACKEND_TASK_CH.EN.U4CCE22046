@@ -1,0 +1,6 @@
+{
+  "id": "fail_test_001",
+  "command": "python non_existing_script.py",
+  "timeout": 3,
+  "max_retries": 1
+}

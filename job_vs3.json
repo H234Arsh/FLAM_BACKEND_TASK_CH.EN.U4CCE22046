@@ -1,0 +1,6 @@
+{
+  "command": "sleep 5",
+  "max_retries": 3,
+  "timeout": 10,
+  "state": "pending"
+}
